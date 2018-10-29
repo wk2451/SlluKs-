@@ -1,0 +1,51 @@
+<template name="1773d613">
+  <view class="_view data-v-3f85773c page">
+    <view class="_view data-v-3f85773c uni-card">
+      <view class="_view data-v-3f85773c uni-list">
+        <block wx:key="index" key="{{index}}" wx:for="{{lists}}" wx:for-index="index" wx:for-item="list">
+          <view class="_view data-v-3f85773c uni-list-cell uni-collapse">
+            <view class="_view data-v-3f85773c uni-collapse-content {{list.show ? 'uni-active' : ''}}">
+              <swiper wx:if="{{list.type === 'swiper'}}" autoplay="true" indicator-dots="true" circular="true" style="height: 400rpx;" class="_swiper data-v-3f85773c">
+                <swiper-item wx:key="key" key="{{key}}" wx:for="{{imgUrls}}" wx:for-index="key" wx:for-item="img" class="_swiper-item data-v-3f85773c">
+                  <image src="{{img}}" style="height: 400rpx;" class="_image data-v-3f85773c"></image>
+                </swiper-item>
+              </swiper>
+              <view wx:if="{{list.type === 'font'}}" class="_view data-v-3f85773c page-pd">
+                <view class="_view data-v-3f85773c size-5">hello uni-app</view>
+                <view class="_view data-v-3f85773c size-4">hello uni-app</view>
+                <view class="_view data-v-3f85773c size-3">hello uni-app</view>
+                <view class="_view data-v-3f85773c size-2">hello uni-app</view>
+                <view class="_view data-v-3f85773c size-1">hello uni-app</view>
+              </view>
+              <view wx:if="{{list.type === 'list'}}" class="_view data-v-3f85773c">
+                <view class="_view data-v-3f85773c uni-list">
+                  <view class="_view data-v-3f85773c uni-list-cell" hover-class="uni-list-cell-hover">
+                    <view class="_view data-v-3f85773c uni-list-cell-navigate uni-navigate-right">hello uni-app</view>
+                  </view>
+                  <view class="_view data-v-3f85773c uni-list-cell" hover-class="uni-list-cell-hover">
+                    <view class="_view data-v-3f85773c uni-list-cell-navigate uni-navigate-right">hello uni-app</view>
+                  </view>
+                  <view class="_view data-v-3f85773c uni-list-cell" hover-class="uni-list-cell-hover">
+                    <view class="_view data-v-3f85773c uni-list-cell-navigate uni-navigate-right">hello uni-app</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="_view data-v-3f85773c index-content">
+      <view class="_view data-v-3f85773c content product">
+        <image src="https://www.slluks.com/upload/image_collection/1523930549.jpg" class="_image data-v-3f85773c"></image>
+      </view>
+      <view class="_view data-v-3f85773c content contents">
+        <image src="https://www.slluks.com/upload/image_collection/1523937404.jpg" class="_image data-v-3f85773c"></image>
+      </view>
+      <view class="_view data-v-3f85773c content art">
+        <image src="https://www.slluks.com/upload/image_collection/index_3.jpg" class="_image data-v-3f85773c"></image>
+      </view>
+    </view>
+    <map style="width: 100%; height: 300rpx;" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{covers}}" class="_map data-v-3f85773c"></map>
+  </view>
+</template>

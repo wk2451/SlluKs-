@@ -1,0 +1,15 @@
+<template name="3ada746d">
+  <view class="_view data-v-08d421fc page">
+    <page-head title="{{title}}" class="_page-head data-v-08d421fc">{{title}}</page-head>
+    <view class="_view data-v-08d421fc">
+      <view class="_view data-v-08d421fc 11" wx:key="index" key="{{index}}" wx:for="{{allType}}" wx:for-index="index" wx:for-item="evetype">
+        <view class="_h2 data-v-08d421fc first_type">·{{evetype.category_name}}</view>
+        <view class="_view data-v-08d421fc">
+          <navigator url="{{'/pages/product/product?category_id='+evetype.category_id+'&&category_name='+evetype.category_name}}" class="_navigator data-v-08d421fc second_type" open-type="navigate"> 全部{{evetype.category_name}} </navigator>
+          <navigator wx:if="{{evetype.child_list != ''}}" url="{{'/pages/product/product?category_id='+child_type.category_id+'&&category_name='+child_type.category_name}}" open-type="navigate" class="_navigator data-v-08d421fc second_type"
+            wx:key="index1" key="{{index1}}" wx:for="{{evetype.child_list}}" wx:for-index="index1" wx:for-item="child_type"> {{index1+1}}.{{child_type.category_name}} </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

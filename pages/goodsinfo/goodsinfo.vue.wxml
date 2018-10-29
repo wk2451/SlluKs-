@@ -1,0 +1,32 @@
+<template name="3713aa55">
+  <view class="_view data-v-050d57e4 goods_info">
+    <view class="_view data-v-050d57e4 content">
+      <image src="{{'https://www.slluks.com/'+cover}}" mode="aspectFit" class="_image data-v-050d57e4 goods_img"></image>
+      <view class="_p data-v-050d57e4 goods_name">{{goods_info['goods_name']}}￥{{goods_info['price']}}</view>
+      <button wx:if="{{goods_info['stock'] > 0}}" type="{{type}}" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" class="_button data-v-050d57e4 add2car"
+        bindtap="handleProxy" data-eventid="{{'uu6-0'}}" data-comkey="{{$k}}"> 加入购物车 </button>
+      <button wx:elif="{{goods_info['stock'] == 0}}" type="warn" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="true" class="_button data-v-050d57e4 add2car"> 已售空 </button>
+    </view>
+    <view class="_view data-v-050d57e4 description">
+      <rich-text nodes="{{nodes}}" class="_rich-text data-v-050d57e4"></rich-text>
+    </view>
+    <view wx:if="{{show}}" class="_view data-v-050d57e4 addtocar">
+      <view class="_view data-v-050d57e4 name"> {{goods_info['goods_name']}} </view>
+      <view class="_view data-v-050d57e4 price"> 总价:￥{{num}}.00 </view>
+      <view class="_view data-v-050d57e4 count">
+        <view class="_view data-v-050d57e4 section section_gap">
+          <view class="_view data-v-050d57e4 body-view">
+            <slider bindchange="handleProxy" min="1" max="{{goods_info['stock']}}" step="1" show-value data-eventid="{{'A25-1'}}" data-comkey="{{$k}}" class="_slider data-v-050d57e4" />
+          </view>
+        </view>
+      </view>
+      <view class="_view data-v-050d57e4 submit">
+        <button type="primary" bindtap="handleProxy" data-eventid="{{'lJo-2'}}" data-comkey="{{$k}}" class="_button data-v-050d57e4">取消</button>
+        <button type="warn" bindtap="handleProxy" data-eventid="{{'BF2-3'}}" data-comkey="{{$k}}" class="_button data-v-050d57e4">加入购物车</button>
+      </view>
+    </view>
+    <view class="_view data-v-050d57e4">
+      <navigator open-type="switchTab" url="/pages/cart/cart" class="_navigator data-v-050d57e4 cart" style="background-image: url(../../static/images/tocart.png);"></navigator>
+    </view>
+  </view>
+</template>

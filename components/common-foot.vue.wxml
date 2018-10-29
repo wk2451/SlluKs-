@@ -1,0 +1,16 @@
+<template name="6326c7d9">
+  <view class="_view data-v-1bde3011 nav-tab">
+    <view class="_view data-v-1bde3011 daohang">
+      <navigator url="/pages/index/index" open-type="redirect" hover-class="navigator-hover" class="_navigator data-v-1bde3011"> 首页 </navigator>
+    </view>
+    <view class="_view data-v-1bde3011 daohang">
+      <navigator url="/pages/content/content" open-type="redirect" hover-class="navigator-hover" class="_navigator data-v-1bde3011"> 内容 </navigator>
+    </view>
+    <view class="_view data-v-1bde3011 daohang">
+      <navigator url="/pages/art/art" open-type="redirect" hover-class="navigator-hover" class="_navigator data-v-1bde3011"> 艺术 </navigator>
+    </view>
+    <view class="_view data-v-1bde3011 daohang">
+      <navigator url="/pages/product/product" open-type="redirect" hover-class="navigator-hover" class="_navigator data-v-1bde3011"> 产品 </navigator>
+    </view>
+  </view>
+</template>

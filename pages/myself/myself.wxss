@@ -1,0 +1,27 @@
+@import "../../common/vendor.wxss";
+
+.userinfo {
+  width: 100%;
+  text-align: center;
+  padding: 150rpx 0;
+}
+.userinfo image {
+  width: 200rpx;
+  border-radius: 30rpx;
+}
+.options {
+  border-top: 1rpx solid #00BFFF;
+}
+.option {
+  width: 715rpx;
+  padding: 25rpx 0;
+  padding-left: 50rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #00BFFF;
+}
+.getUserInfo {
+  margin-top: 75%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 700rpx;
+}

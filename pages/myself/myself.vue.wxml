@@ -1,0 +1,14 @@
+<template name="18afe345">
+  <view class="_view data-v-2f041f5a page" wx:if="{{is_login}}">
+    <view class="_view data-v-2f041f5a userinfo">
+      <image src="{{user_image}}" mode="widthFix" class="_image data-v-2f041f5a"></image>
+    </view>
+    <view class="_view data-v-2f041f5a options">
+      <navigator url="/pages/orderlist/orderlist" open-type="navigate" class="_navigator data-v-2f041f5a option myorder" style="background: url('../../static/images/order.png') no-repeat 35% center;background-size: auto 60%;">我的订单</navigator>
+      <navigator url="/pages/address/address" open-type="navigate" class="_navigator data-v-2f041f5a option myaddress" style="background: url('../../static/images/address.png') no-repeat 35% center;background-size: auto 60%;">我的地址</navigator>
+    </view>
+  </view>
+  <view class="_view data-v-2f041f5a page" wx:else>
+    <button type="primary" open-type="getUserInfo" bindgetuserinfo="handleProxy" withCredentials="true" class="_button data-v-2f041f5a getUserInfo" data-eventid="{{'YpK-0'}}" data-comkey="{{$k}}">用户登陆</button>
+  </view>
+</template>

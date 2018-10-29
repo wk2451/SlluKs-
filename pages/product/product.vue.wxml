@@ -1,0 +1,28 @@
+<import src="/components/product.vue.wxml" />
+<template name="86afb2aa">
+  <view class="_view data-v-21abc47a page" wx:if="{{empty}}">
+    <page-head title="{{title}}" class="_page-head data-v-21abc47a">{{title}}</page-head>
+    <view class="_view data-v-21abc47a content_empty">
+      <image src="../../static/images/empty.png" mode="widthFix" class="_image data-v-21abc47a empty"></image>
+    </view>
+  </view>
+  <view class="_view data-v-21abc47a page" wx:else>
+    <page-head title="{{title}}" class="_page-head data-v-21abc47a">{{title}}</page-head>
+    <view class="_view data-v-21abc47a orderby">
+      <view class="_view data-v-21abc47a order sales" bindtap="handleProxy" data-eventid="{{'Cwk-0'}}" data-comkey="{{$k}}"> 销量
+        <image src="{{salesUrl}}" mode="widthFix" class="_image data-v-21abc47a"></image>
+      </view>
+      <view class="_view data-v-21abc47a order time" bindtap="handleProxy" data-eventid="{{'vFb-1'}}" data-comkey="{{$k}}"> 上货时间
+        <image src="{{timeUrl}}" mode="widthFix" class="_image data-v-21abc47a"></image>
+      </view>
+      <view class="_view data-v-21abc47a order price" bindtap="handleProxy" data-eventid="{{'W7r-2'}}" data-comkey="{{$k}}"> 价格
+        <image src="{{priceUrl}}" mode="widthFix" class="_image data-v-21abc47a"></image>
+      </view>
+    </view>
+    <view class="_view data-v-21abc47a product-list">
+      <view wx:key="index" key="{{index}}" wx:for="{{productList}}" wx:for-index="index" wx:for-item="product" class="_view data-v-21abc47a">
+        <template data="{{...$root['0'], ...$root[$kk+'DP8-2-'+index],$root}}" is="4dadceb8"></template>
+      </view>
+    </view>
+  </view>
+</template>

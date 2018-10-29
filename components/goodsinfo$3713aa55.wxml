@@ -1,0 +1,10 @@
+<template name="goodsinfo$3713aa55">
+  <view class="_view data-v-050d57e4 goods_info">
+    <view class="_view data-v-050d57e4 content">
+      <image src="{{'https://www.slluks.com/'+cover}}" mode="aspectFit" class="_image data-v-050d57e4 goods_img"></image>
+      <view class="_p data-v-050d57e4 goods_name">{{goods_info['goods_name']}}￥{{goods_info['price']}}</view>
+      <button type="{{type}}" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" class="_button data-v-050d57e4 add2car" bindtap="handleProxy" data-eventid="{{'0'}}"
+        data-comkey="{{$k}}"> 加入购物车 </button>
+    </view>
+  </view>
+</template>

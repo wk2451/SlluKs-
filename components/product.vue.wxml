@@ -1,0 +1,14 @@
+<template name="4dadceb8">
+  <view class="_view data-v-d1dbda20 product">
+    <navigator url="{{'/pages/goodsinfo/goodsinfo?goodsid='+tip}}" open-type="navigate" class="_navigator data-v-d1dbda20">
+      <image class="_image data-v-d1dbda20 product-image" src="{{image ? image : 'http://via.placeholder.com/150x200'}}"></image>
+      <view class="_view data-v-d1dbda20 product-title">{{title}}</view>
+      <view class="_view data-v-d1dbda20 product-price">
+        <text class="_text data-v-d1dbda20 product-price-favour" wx:if="{{originalPrice != favourPrice}}">￥{{originalPrice}}</text>
+        <text class="_text data-v-d1dbda20 product-price-original">￥{{favourPrice}}</text>
+        <text class="_text data-v-d1dbda20 product-tip" wx:if="{{tip==204}}">热销</text>
+        <text class="_text data-v-d1dbda20 product-tip" wx:elif="{{tip==210}}">折扣</text>
+      </view>
+    </navigator>
+  </view>
+</template>

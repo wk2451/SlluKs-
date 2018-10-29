@@ -1,0 +1,11 @@
+<import src="product$4dadceb8" />
+<template name="product$86afb2aa">
+  <view class="_view data-v-21abc47a page">
+    <page-head title="{{title}}" class="_page-head data-v-21abc47a"></page-head>
+    <view class="_view data-v-21abc47a product-list">
+      <view wx:key="index" key="{{index}}" wx:for="{{productList}}" wx:for-index="index" wx:for-item="product" class="_view data-v-21abc47a">
+        <template data="{{...$root[$kk+'1-'+index], $root}}" is="product$4dadceb8"></template>
+      </view>
+    </view>
+  </view>
+</template>
