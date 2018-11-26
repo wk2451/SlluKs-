@@ -1,0 +1,18 @@
+<template name="66a48025">
+  <view class="_view data-v-349e2db4 page">
+    <view class="_view data-v-349e2db4 title">我的订单</view>
+    <view wx:if="{{orderList==false}}" class="_view data-v-349e2db4 noorder">
+      <view class="_view data-v-349e2db4 message"> 没有订单 </view>
+      <image src="https://slluks.com/upload/app/order3.png" mode="widthFix" class="_image data-v-349e2db4"></image>
+    </view>
+    <view wx:else class="_view data-v-349e2db4">
+      <view wx:key="index" key="{{index}}" class="_view data-v-349e2db4 every_order" wx:for="{{orderList}}" wx:for-index="index" wx:for-item="order">
+        <view class="_view data-v-349e2db4">订单编号: {{order.order_no}}</view>
+        <view class="_view data-v-349e2db4">金额: {{order.pay_money}}</view>
+        <view class="_view data-v-349e2db4">订单创建时间: {{order.create_time}}</view>
+        <view class="_view data-v-349e2db4">订单状态: {{order.order_status}}</view>
+        <navigator open-type="navigate" url="{{'/pages/orderinfo/orderinfo?order_id='+order.order_id}}" class="_navigator data-v-349e2db4">查看订单详情</navigator>
+      </view>
+    </view>
+  </view>
+</template>

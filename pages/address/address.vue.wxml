@@ -1,0 +1,19 @@
+<template name="66d35ab5">
+  <view class="_view data-v-68520ef8">
+    <form bindsubmit="handleProxy" data-eventid="{{'CqL-4'}}" data-comkey="{{$k}}" class="_form data-v-68520ef8">
+      <picker mode="selector" range="{{country}}" value="{{country_index}}" range-key="name" bindchange="handleProxy" data-eventid="{{'l4v-0'}}" data-comkey="{{$k}}" class="_picker data-v-68520ef8">
+        <text class="_text data-v-68520ef8">{{country[country_index].name}}</text>
+      </picker>
+      <picker mode="selector" range="{{province}}" value="{{province_index}}" range-key="province_name" bindchange="handleProxy" data-eventid="{{'1Vk-1'}}" data-comkey="{{$k}}" class="_picker data-v-68520ef8">
+        <text class="_text data-v-68520ef8">{{province[province_index].province_name}}</text>
+      </picker>
+      <picker mode="selector" range="{{city}}" value="{{city_index}}" range-key="city_name" bindchange="handleProxy" data-eventid="{{'mOl-2'}}" data-comkey="{{$k}}" class="_picker data-v-68520ef8">
+        <text class="_text data-v-68520ef8">{{city[city_index].city_name}}</text>
+      </picker>
+      <picker mode="selector" range="{{district}}" value="{{district_index}}" range-key="district_name" bindchange="handleProxy" data-eventid="{{'pDT-3'}}" data-comkey="{{$k}}" class="_picker data-v-68520ef8">
+        <text class="_text data-v-68520ef8">{{district[district_index].district_name}}</text>
+      </picker>
+      <button formType="submit" class="_button data-v-68520ef8">Submit</button>
+    </form>
+  </view>
+</template>

@@ -1,0 +1,37 @@
+<template name="ff5febb6">
+  <view class="_view data-v-dcb23a8c page">
+    <view class="_view data-v-dcb23a8c title"> 请确认订单信息 </view>
+    <view class="_view data-v-dcb23a8c cart_list">
+      <view wx:key="index" key="{{index}}" class="_view data-v-dcb23a8c cart_info" wx:for="{{order_list}}" wx:for-index="index" wx:for-item="cart">
+        <view class="_view data-v-dcb23a8c">{{cart.goods_name}}</view>
+        <view class="_view data-v-dcb23a8c">x {{cart.num}}</view>
+        <view class="_view data-v-dcb23a8c">{{cart.price}}</view>
+      </view>
+    </view>
+    <view class="_view data-v-dcb23a8c price">
+      <view class="_view data-v-dcb23a8c">总价</view>
+      <view class="_view data-v-dcb23a8c"></view>
+      <view class="_view data-v-dcb23a8c total">{{total}}.00</view>
+    </view>
+    <view class="_view data-v-dcb23a8c bottom">
+      <button type="warn" class="_button data-v-dcb23a8c gotopay" bindtap="handleProxy" data-eventid="{{'ZxC-0'}}" data-comkey="{{$k}}">去支付</button>
+    </view>
+    <form bindsubmit="handleProxy" class="_form data-v-dcb23a8c address" data-eventid="{{'J6J-8'}}" data-comkey="{{$k}}">
+      <picker mode="selector" range="{{country}}" value="{{country_index}}" range-key="name" bindchange="handleProxy" data-eventid="{{'jPz-1'}}" data-comkey="{{$k}}" class="_picker data-v-dcb23a8c">
+        <text class="_text data-v-dcb23a8c">{{country[country_index].name}}</text>
+      </picker>
+      <picker mode="selector" range="{{province}}" value="{{province_index}}" range-key="province_name" bindchange="handleProxy" data-eventid="{{'YtU-2'}}" data-comkey="{{$k}}" class="_picker data-v-dcb23a8c">
+        <text class="_text data-v-dcb23a8c">{{province[province_index].province_name}}</text>
+      </picker>
+      <picker mode="selector" range="{{city}}" value="{{city_index}}" range-key="city_name" bindchange="handleProxy" data-eventid="{{'EGF-3'}}" data-comkey="{{$k}}" class="_picker data-v-dcb23a8c">
+        <text class="_text data-v-dcb23a8c">{{city[city_index].city_name}}</text>
+      </picker>
+      <picker mode="selector" range="{{district}}" value="{{district_index}}" range-key="district_name" bindchange="handleProxy" data-eventid="{{'1Il-4'}}" data-comkey="{{$k}}" class="_picker data-v-dcb23a8c">
+        <text class="_text data-v-dcb23a8c">{{district[district_index].district_name}}</text>
+      </picker>
+      <input type="text" placeholder="收货人详细地址" bindblur="handleProxy" maxlength="20" data-eventid="{{'oq1-5'}}" data-comkey="{{$k}}" class="_input data-v-dcb23a8c" />
+      <input type="text" placeholder="收货人姓名" bindblur="handleProxy" maxlength="10" data-eventid="{{'SeU-6'}}" data-comkey="{{$k}}" class="_input data-v-dcb23a8c" />
+      <input type="text" placeholder="收货人联系方式" bindblur="handleProxy" maxlength="11" data-eventid="{{'1lt-7'}}" data-comkey="{{$k}}" class="_input data-v-dcb23a8c" />
+    </form>
+  </view>
+</template>

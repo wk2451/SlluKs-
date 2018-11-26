@@ -1,0 +1,42 @@
+@import "../../common/vendor.wxss";
+
+.title {
+  text-indent: 50rpx;
+  padding: 20rpx 0;
+}
+.cart_list {
+  width: 650rpx;
+  padding: 20rpx 50rpx;
+}
+.cart_info view {
+  width: 200rpx;
+  display: inline-block;
+}
+.bottom {
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: right;
+}
+.gotopay {
+  border-radius: 0;
+}
+.price {
+  padding: 0 50rpx;
+}
+.price view {
+  display: inline-block;
+  width: 200rpx;
+}
+.address picker {
+  margin-left: 50rpx;
+}
+.address ._input {
+  width: 650rpx;
+  padding: 10rpx;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+  border: 1rpx solid #09BB07;
+  border-radius: 5rpx;
+}

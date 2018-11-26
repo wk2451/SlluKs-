@@ -1,0 +1,19 @@
+<template name="30f50445">
+  <view class="_view data-v-02229c58 page">
+    <view class="_view data-v-02229c58 order_info"> 订单号 : {{order_info.order_no}} </view>
+    <view class="_view data-v-02229c58 order_info"> 订单创建时间 : {{order_info.create_time}} </view>
+    <view class="_view data-v-02229c58 goods_info">商品名称 : </view>
+    <view class="_view data-v-02229c58 goods_info">商品单价 : </view>
+    <view class="_view data-v-02229c58 goods_info">商品数量 : </view>
+    <view wx:key="index" key="{{index}}" wx:for="{{order_gooods_info}}" wx:for-index="index" wx:for-item="order_goods" class="_view data-v-02229c58">
+      <view class="_view data-v-02229c58 goods_info">{{order_goods.goods_name}}</view>
+      <view class="_view data-v-02229c58 goods_info">￥{{order_goods.price}}</view>
+      <view class="_view data-v-02229c58 goods_info">{{order_goods.num}}</view>
+    </view>
+    <view class="_view data-v-02229c58 order_info"> 支付金额 : ￥{{order_info.pay_money}}.00 </view>
+    <view class="_view data-v-02229c58 order_info"> 订单状态 : {{order_info.order_status}} </view>
+    <view class="_view data-v-02229c58" wx:if="{{order_info.order_status==0 && order_info.pay_status==1}}">
+      <button type="primary" class="_button data-v-02229c58">去支付</button>
+    </view>
+  </view>
+</template>
